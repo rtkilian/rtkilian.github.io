@@ -6,6 +6,10 @@ categories: streamlit
 ---
 *This article was originally posted on [Medium](https://medium.com/@rtkilian/deploy-and-share-your-sentiment-analysis-app-using-streamlit-sharing-2ba3ca6a3ead).*
 
+| ![Streamlit logo](/assets/streamlit.jpeg) | 
+|:--:| 
+| Source: [Streamlit](https://streamlit.io/) |
+
 Imagine this, you’ve spent the last two weeks developing a killer sentiment analysis model on your local machine. You’ve experimented with five different models, tuned your hyperparameters to perfection and tested the performance on a range of scenarios.
 
 But now a non-technical Product Manager wants to review your model. What do you do?
