@@ -52,3 +52,56 @@ When installed, run the following command:
 {% highlight python %}
 pip install transformers
 {% endhighlight %}
+
+## Step 2: Project Set-Up
+All your code will need to be contained within a Python file (.py). I personally use Visual Studio Code that comes installed in Anaconda, however, you can also download your Jupyter Notebook as a .py file.
+
+I’ve called my file **sentiment_analyser.py**.
+
+Now, import the libraries you downloaded in Step 1:
+{% highlight python %}
+import streamlit as st
+from transformers import pipeline
+{% endhighlight %}
+
+In the same directory, create a text file called **requirements.txt** and copy the version of the libraries you installed in Step 1. When it comes time to deploy your app, Streamlit Sharing will install the libraries in this file.
+{% highlight python %}
+streamlit==0.86
+transformers==4.8.1
+torch==1.9.0
+{% endhighlight %}
+
+At this point, you should also create a **GitHub repo**. If you’ve never used GitHub before, I recommend checking out their [documentation](https://docs.github.com/en/get-started/quickstart/create-a-repo) to set up your first repo.
+
+## Step 3: Create the User Interface Using Streamlit
+Finally, something fun! We will now start by creating the structure of your Streamlit web application.
+
+First, let’s add a title and some descriptive text by adding the following code to your **sentiment_analyser.py** file:
+{% highlight python %}
+st.title('Sentiment Analyser App')
+st.write('Welcome to my sentiment analysis app!')
+{% endhighlight %}
+
+To run your app locally (before we deploy it), navigate to your development directory in your terminal and run the following command:
+{% highlight python %}
+streamlit run sentiment_analyser.py
+{% endhighlight %}
+
+If all goes to plan, you should have your Streamlit app popping up in a new browser window.
+
+| ![Streamlit first app](/assets/streamlit-first-app.png) | 
+|:--:| 
+| Your first Streamlit application |
+
+We will now build a simple form that contains a text area for user input and a submit button. Our ‘*user_input*’ variable will be passed into our sentiment analysis model in Step 4.
+
+{% highlight python %}
+form = st.form(key='sentiment-form')
+user_input = form.text_area('Enter your text')
+submit = form.form_submit_button('Submit')
+{% endhighlight %}
+
+After refreshing your application, it should now look like this:
+| ![Streamlit first app refreshed](/assets/streamlit-first-app-refreshed.png) | 
+|:--:| 
+| Streamlit application with user input form |
