@@ -28,6 +28,12 @@ twitter_username: rtkilian
 github_username:  rtkilian
 google_analytics: G-VJ1KP03DR1
 
+# # Analytics
+# analytics:
+#   provider: "google-gtag"
+#   google:
+#     measurement_id: "G-VJ1KP03DR1"
+
 # Build settings
 theme: minima
 plugins:
