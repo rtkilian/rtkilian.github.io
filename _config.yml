@@ -21,7 +21,7 @@
 title: rhyskilian
 email: rhys.kilian12@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Rhys Kilian is a Data Scientist at Movember. He has been working for 3 years.
+  Rhys Kilian is a Data Scientist at Movember who is experienced in experimentation and customer modelling. Previously, he worked as a Management Consultant with Kearney working on several data science engagements with ASX200 companies.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rtkilian
