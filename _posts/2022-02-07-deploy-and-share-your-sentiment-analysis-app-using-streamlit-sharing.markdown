@@ -42,3 +42,13 @@ pip install streamlit
 You should also request an invitation for [**Streamlit Sharing**](https://streamlit.io/sharing) which allows you to deploy, manage, and share your apps with the world, directly from Streamlit.
 
 It may take up to 2-days to receive your invitation. However, I received my invitation within 24-hours, even after requesting it on the weekend.
+
+### 🤗 Transformers by Hugging Face
+[🤗 Transformers](https://huggingface.co/transformers/) provides general-purpose architectures (BERT, GPT-2, etc.) for Natural Language Understanding (NLU) and Natural Language Generation (NLG) with over 32+ pre-trained models in 100+ languages. In only a few lines of code, you can have a state of the art sentiment analysis model downloaded and ready to go.
+
+First, you need to install one of, or both, TensorFlow 2.0 and PyTorch. Please refer to the [TensorFlow installation](https://www.tensorflow.org/install/pip#tensorflow-2.0-rc-is-available) page and [PyTorch](https://pytorch.org/get-started/locally/#start-locally) installation page regarding the specific install command for your platform.
+
+When installed, run the following command:
+{% highlight python %}
+pip install transformers
+{% endhighlight %}
