@@ -12,5 +12,7 @@ I am a graduate of the University of Sydney with First Class Honours in Mechanic
 
 ## Timeline
 2021-now: Data Scientist @ Movember (Experimentation, Customer Modelling)
+
 2020-2021: Senior Analytics Analyst @ Kearney (Modelling, Statistical Analysis)
+
 2019-2020: Analytics Analyst @ Kearney (Modelling, Statistical Analysis)
