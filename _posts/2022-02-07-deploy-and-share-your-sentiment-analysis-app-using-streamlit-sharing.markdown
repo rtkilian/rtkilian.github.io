@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2022-02-07 17:45:58 +1100
-categories: jekyll update
+title:  "Deploy and share your sentiment analysis app using Streamlit Sharing"
+date:   2022-02-07 10:10:00 +1100
+categories: streamlit
 published: true
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
