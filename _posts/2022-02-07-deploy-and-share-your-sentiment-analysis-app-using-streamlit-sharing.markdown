@@ -102,6 +102,68 @@ submit = form.form_submit_button('Submit')
 {% endhighlight %}
 
 After refreshing your application, it should now look like this:
+
 | ![Streamlit first app refreshed](/assets/streamlit-first-app-refreshed.png) | 
 |:--:| 
 | Streamlit application with user input form |
+
+## Step 4: Classify User Input Using 🤗 Transformers
+Hugging Face has an [excellent tutorial](https://huggingface.co/course/chapter1/3?fw=pt) on their 🤗 Transformer library. For this tutorial, we will be using the pipeline object that will connect the default sentiment analysis model with its necessary preprocessing and postprocessing steps.
+
+If you were to run the following code in a Jupyter Notebook or .py file:
+{% highlight python %}
+classifier = pipeline("sentiment-analysis")
+classifier("I've been waiting for a HuggingFace course my whole life.")
+{% endhighlight %}
+
+It would output the classified sentiment label (‘POSITIVE or ‘NEGATIVE’), along with a confidence score.
+
+{% highlight python %}
+[{'label': 'POSITIVE', 'score': 0.9598047137260437}]
+{% endhighlight %}
+
+## Step 5: Linking Streamlit and the Sentiment Analysis Model
+By now, you should see that we already have the basic building blocks of our application. To finish our app, let’s classify our ‘user_input’ variable using the 🤗 Transformer library to give our sentiment label and confidence score:
+{% highlight python %}
+classifier = pipeline("sentiment-analysis")    
+result = classifier(user_input)[0]    
+label = result['label']    
+score = result['score']
+{% endhighlight %}
+
+However, we only want to run out model after the user submitted the form. We can also display the result in a green banner (`st.success`) for ‘POSITIVE’ sentiment and in a red banner (`st.error`) for ‘NEGATIVE’ sentiment:
+{% highlight python %}
+if submit:
+    classifier = pipeline("sentiment-analysis")
+    result = classifier(user_input)[0]
+    label = result['label']
+    score = result['score']
+if label == 'POSITIVE':
+        st.success(f'{label} sentiment (score: {score})')
+    else:
+        st.error(f'{label} sentiment (score: {score})')
+{% endhighlight %}
+
+Once complete, **push your changes to your GitHub repo**.
+
+If you want to see all the code in my **sentiment_analyser.py** file, please check out my [GitHub repo](https://github.com/rtkilian/streamlit-huggingface/blob/main/sentiment_analyser.py).
+
+## Step 6: Deploy Your App to Streamlit Sharing
+You should now have a functioning application on your local machine. But we want to be able to share our application just by sharing a single URL using Streamlit Sharing.
+
+Once you have received your invitation to register for Streamlit Sharing, you can create a ‘New app’ on your app dashboard. Enter your GitHub username/repo, the name of your branch and the name of the Python file that contains your code. It should look something like this:
+
+| ![Streamlit sharing configuration](/assets/streamlit-sharing-config.png) | 
+|:--:| 
+| Streamlit Sharing configuration |
+
+Once you hit ‘Deploy!’, Streamlit will look for your requirements.txt file in your repo and install all the required libraries. After it has finished installing, you should receive a message that your application has been deployed successfully and you should be provided with a URL. For example, you can find my app [here](https://share.streamlit.io/rtkilian/streamlit-huggingface/main/sentiment_analyser.py).
+
+Congratulations! You have just deployed your sentiment analysis application that you can now share.
+
+## Conclusion
+In this tutorial, I have shown you how you can build a simple interface using Streamlit to capture user input, classify the sentiment using Hugging Face’s 🤗 Transformer library, and deploy your application using Streamlit Sharing. We have only scratched the surface of what is possible using Streamlit (and Hugging Face). But now you should have the basic tools to share your prototypes with your colleagues, friends and family.
+
+I encourage you to experiment. How can you make this app faster? What other NLP models can you deploy?
+
+Share your apps with me on [**Twitter**](https://twitter.com/rtkilian) or add me on [**LinkedIn**](https://www.linkedin.com/in/rtkilian/). More than happy to answer any questions you may have!
