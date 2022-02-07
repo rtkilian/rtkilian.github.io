@@ -19,3 +19,9 @@ You could share your virtual environment? They don’t know how to code.
 You could get a developer to deploy the model? Their task list is two weeks long.
 
 Unfortunately, this is a scenario that many Data Scientists find themselves in. **But thanks to [Streamlit Sharing](https://streamlit.io/sharing) you can now deploy and share your model in less than 30-minutes without help from a developer.**
+
+## The Goal of this Tutorial
+In this tutorial, I will show you how to deploy a [sentiment analysis](https://en.wikipedia.org/wiki/Sentiment_analysis) model using Streamlit Sharing. A user will be able to enter their text and the model will classify it as ‘POSITIVE’ or ‘NEGATIVE’ sentiment, along with a confidence score.
+
+To see a **live demo** of my application on Streamlit Sharing: [click here](https://share.streamlit.io/rtkilian/streamlit-huggingface/main/sentiment_analyser.py).
+To view my **source code** on GitHub: [click here](https://github.com/rtkilian/streamlit-huggingface).
