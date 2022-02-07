@@ -1,11 +1,14 @@
 ---
 layout: post
-title:  "My first post"
-date:   2020-04-01 06:45:58 +1100
-categories: misc
-published: false
+title:  "Welcome to Jekyll!"
+date:   2022-02-07 17:45:58 +1100
+categories: jekyll update
+published: true
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+... which is shown in the screenshot below:
+![My helpful screenshot](/assets/streamlit.jpg)
 
 Jekyll requires blog post files to be named according to the following format:
 
@@ -15,10 +18,10 @@ Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit number
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight python %}
-def print_hi(name):
-  print('Hi' + name)
-
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}

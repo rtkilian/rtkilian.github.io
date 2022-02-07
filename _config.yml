@@ -19,20 +19,15 @@
 # in the templates via {{ site.myvariable }}.
 
 title: rhyskilian
-email: rhys.kilian12@egmail.com
+email: rhys.kilian12@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Rhys Kilian is a Data Scientist at Movember. He has been working for 3 years.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rtkilian
 github_username:  rtkilian
-google_analytics: G-VJ1KP03DR1
 
-# # Analytics
-# analytics:
-#   provider: "google-gtag"
-#   google:
-#     measurement_id: "G-VJ1KP03DR1"
+google_analytics: G-VJ1KP03DR1
 
 # Build settings
 theme: minima
