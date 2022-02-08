@@ -2,7 +2,7 @@
 layout: post
 title:  "Deploy and share your sentiment analysis app using Streamlit Sharing"
 date:   2022-02-07 10:10:00 +1100
-categories: streamlit
+categories: writing
 ---
 *This article was originally posted on [Medium](https://medium.com/@rtkilian/deploy-and-share-your-sentiment-analysis-app-using-streamlit-sharing-2ba3ca6a3ead).*
 
